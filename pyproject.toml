@@ -1,0 +1,22 @@
+[project]
+name = "replay"
+version = "0.1.0"
+description = "Record a motion with the leader arm, then play it back on the follower."
+requires-python = ">=3.12"
+dependencies = ["monorobot"]
+
+[tool.monorobot]
+author = "grand-wizard-create"
+description = "Record a motion with the leader arm, then play it back on the follower."
+license = "Apache-2.0"
+network = false
+whats_new = "First version."
+robots = ["lynxmotion_al5d"]
+filesystem_write = ["app_data"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["."]

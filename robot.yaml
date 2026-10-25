@@ -1,0 +1,12 @@
+rate_hz: 60
+robot:
+  type: hf_so101_follower
+  isolate: true
+  kwargs: {use_default_calibration: true}
+also_uses:
+  - name: leader
+    type: hf_so101_leader
+    required: false
+    isolate: true
+    kwargs: {use_default_calibration: true}
+devices: []
